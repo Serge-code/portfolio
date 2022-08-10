@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome', ['title' => 'Главная', 'content' => 'В разработке']);
-});
+    return view('main', ['title' => 'Главная', 'content' => 'В разработке']);
+})->name('home');
+
+Route::get('/works', function () {
+    return view('works', ['title' => 'Работы', 'content' => 'В разработке']);
+})->name('works');
+
+Route::get('/profile', function () {
+    return view('profile', ['title' => 'Профиль', 'content' => 'В разработке']);
+})->name('profile');
+
+Route::get('/contact', function () {
+    return view('contact', ['title' => 'Контакты', 'content' => 'В разработке']);
+})->name('contact');
+
+

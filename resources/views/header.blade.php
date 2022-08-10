@@ -3,12 +3,12 @@
     <nav class="fh5co-nav" role="navigation">
         <div class="container">
             <div class="fh5co-top-logo">
-                <div id="fh5co-logo"><a href="index.html">Shift</a></div>
+                <div id="fh5co-logo"><a href="{{ route('home') }}">Shift</a></div>
             </div>
             <div class="fh5co-top-menu menu-1 text-center">
                 <ul>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="about.html">Profile</a></li>
+                    <li class="{{ request()->is('works') ? 'active' : '' }}"><a href="{{ route('works') }}">Work</a></li>
+                    <li class="{{ request()->is('profile') ? 'active' : '' }}"><a href="{{ route('profile') }}">Profile</a></li>
                     <li class="has-dropdown">
                         <a href="#">Dropdown</a>
                         <ul class="dropdown">
@@ -18,7 +18,7 @@
                             <li><a href="#">API</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </div>
             <div class="fh5co-top-social menu-1 text-right">
